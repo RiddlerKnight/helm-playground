@@ -1,0 +1,6 @@
+area: {{ int .Values.a }}
+width: {{ int .Values.w }}
+height: {{ int .Values.h }}
+helloWorld: {{ .Values.hw | quote }}
+
+{{ include "example-chart.cal_rectangle" . }}

@@ -1,5 +1,8 @@
 # Helm Playground
 
+This not for real use on kubernetes. \
+It's just for fun and learning how helm is work without kube manifest attr.
+
 ## Use default values
 
 ```bash

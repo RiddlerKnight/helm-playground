@@ -2,13 +2,14 @@ a: 80
 w: 10
 h: 8
 hw: "Hello"
+# appName: "hello-nginx"
+# service:
+#   internalPort: 80
 
-appName: "hello-nginx"
-service:
-  internalPort: 80
-
-image: "nginx:latest"
+# image: "nginx:latest"
 resources:
   requests:
     cpu: 0.5
     memory: 100Mi
+  limits:
+    memory: 200Mi

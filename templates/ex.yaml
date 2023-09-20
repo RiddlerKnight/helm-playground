@@ -1,13 +1,16 @@
+
+# Simple
+area: {{ int .Values.a }}
+width: {{ int .Values.w }}
+height: {{ int .Values.h }}
+helloWorld: {{ .Values.hw | quote }}
+
 {{/*
-# area: { int .Values.a }
-# width: { int .Values.w }
-# height: { int .Values.h }
-# helloWorld: { .Values.hw | quote }
-# { include "example-chart.cal-rectangle" . }
-*/}}
-{{/*
+# This with print all context as yaml 
+# use this when you want to describe all attribute that helm provide.
 {{- toYaml . }}
 */}}
+
 {{/*
 A - next to a {{ or }} removes all whitespace outside between it and 
 the next non-whitespace character. New lines are considered whitespace.
@@ -19,7 +22,16 @@ the next non-whitespace character. New lines are considered whitespace.
   {{- end -}}
 {{- end }}
 
+
+{{/*
+"template" is part of the core Go text/template language. It always renders its results to the template output; 
+it does not produce a value and its result cannot be captured in a variable or included in a pipeline.
+
+"include" is a Helm extension. It captures the template output and returns it as a string. 
+*/}}
 foo-template: {{ template "example-chart.foo-template" . }}
 
 bar-template:
 {{ include "example-chart.bar-template" .Values.resources | indent 2 }}
+
+{{ include "example-chart.cal-rectangle" . }}

@@ -1,18 +1,25 @@
 {{/*
-#area: {{ int .Values.a }}
-#width: {{ int .Values.w }}
-#height: {{ int .Values.h }}
-#helloWorld: {{ .Values.hw | quote }}
-# {{ include "example-chart.cal_rectangle" . }}
+# area: { int .Values.a }
+# width: { int .Values.w }
+# height: { int .Values.h }
+# helloWorld: { .Values.hw | quote }
+# { include "example-chart.cal-rectangle" . }
 */}}
-
-
 {{/*
 {{- toYaml . }}
+*/}}
+{{/*
+A - next to a {{ or }} removes all whitespace outside between it and 
+the next non-whitespace character. New lines are considered whitespace.
 */}}
 
 {{- with .Values -}}
   {{- with .resources -}}
     {{- toYaml . -}}
   {{- end -}}
-{{- end -}}
+{{- end }}
+
+foo-template: {{ template "example-chart.foo-template" . }}
+
+bar-template:
+{{ include "example-chart.bar-template" .Values.resources | indent 2 }}

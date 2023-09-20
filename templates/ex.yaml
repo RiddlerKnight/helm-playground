@@ -35,3 +35,15 @@ bar-template:
 {{ include "example-chart.bar-template" .Values.resources | indent 2 }}
 
 {{ include "example-chart.cal-rectangle" . }}
+
+{{/*
+Range list
+*/}}
+{{- if .Values.deployments -}}
+deploy:
+  {{- range $i, $val := .Values.deployments }}
+  - index: {{ $i }}
+    name: {{ $val.name }}
+    tag: {{ $val.tag }}
+  {{- end }}
+{{- end }}

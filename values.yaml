@@ -13,3 +13,9 @@ resources:
     memory: 100Mi
   limits:
     memory: 200Mi
+
+deployments:
+  - name: app-foo
+    tag: "v1.2.3"
+  - name: app-bar
+    tag: "v2.3.4"

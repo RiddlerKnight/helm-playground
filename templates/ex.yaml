@@ -47,3 +47,17 @@ deploy:
     tag: {{ $val.tag }}
   {{- end }}
 {{- end }}
+
+
+{{/*
+Range Dict
+*/}}
+{{- if .Values.animals -}}
+animals:
+  {{- range $key, $val := .Values.animals }}
+  - species: {{ $key }}
+    {{- if $val.color }}
+    color: {{ $val.color }}
+    {{- end }}
+  {{- end }}
+{{- end }}

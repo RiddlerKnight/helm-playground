@@ -19,3 +19,10 @@ deployments:
     tag: "v1.2.3"
   - name: app-bar
     tag: "v2.3.4"
+
+animals:
+  rabbit:
+    color: red
+  dragon:
+    color: gold
+  frog: {}

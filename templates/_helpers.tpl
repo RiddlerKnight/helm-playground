@@ -12,3 +12,7 @@ result: {{ mul $arg1 $arg2 }}
 {{- define "example-chart.bar-template" -}}
 {{- toYaml . -}}
 {{- end -}}
+
+{{- define "example-chart.check-ctx" -}}
+{{- toYaml .ctx.Values -}}
+{{- end -}}

@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "gamma.name" . }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ include "gamma.name" . }}
+  replicas: {{ default 1 .Values.replica | int }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "gamma.name" . }}
+    spec:
+      containers:
+      - name: 
+        image: 
+        imagePullPolicy: IfNotPresent

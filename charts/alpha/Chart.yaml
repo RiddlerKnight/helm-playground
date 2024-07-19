@@ -1,0 +1,12 @@
+apiVersion: v2
+name: alpha-chart
+version: 1.0.0
+description: Just an example chart
+appVersion: 1.0.0
+dependencies:
+  - name: beta-chart
+    repository: "file://../beta"
+    version: 1.0.0
+  - name: gamma-chart
+    repository: "file://../gamma"
+    version: 1.0.0

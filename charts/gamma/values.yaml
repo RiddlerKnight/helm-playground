@@ -1,0 +1,11 @@
+image:
+  registry: ""
+  repo: nginx
+  tag: "1.25"
+resources:
+  requests:
+    cpu: 0.5
+    memory: 100Mi
+  limits:
+    memory: 200Mi
+replica: 1

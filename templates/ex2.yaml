@@ -1,1 +1,0 @@
-{{ include "example-chart.check-ctx" (dict "ctx" .) }}

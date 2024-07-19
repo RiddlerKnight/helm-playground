@@ -13,6 +13,14 @@ result: {{ mul $arg1 $arg2 }}
 {{- toYaml . -}}
 {{- end -}}
 
-{{- define "example-chart.check-ctx" -}}
+{{- define "example-chart.check-ctx-value" -}}
 {{- toYaml .ctx.Values -}}
+{{- end -}}
+
+{{- define "example-chart.check-ctx-chart-meta" -}}
+{{- toYaml .ctx.Chart -}}
+{{- end -}}
+
+{{- define "example-chart.check-chart-name" -}}
+{{- toYaml .ctx.Chart.Name -}}
 {{- end -}}

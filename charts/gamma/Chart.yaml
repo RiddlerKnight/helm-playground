@@ -1,0 +1,5 @@
+apiVersion: v2
+name: gamma-chart
+version: 1.0.0
+description: Just an example chart
+appVersion: 1.0.0

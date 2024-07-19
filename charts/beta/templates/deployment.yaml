@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "beta.name" . }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ include "beta.name" . }}
+  replicas: {{ default 1 .Values.replica | int }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "beta.name" . }}
+    spec:
+      containers:
+      - name: 
+        image: 
+        imagePullPolicy: IfNotPresent

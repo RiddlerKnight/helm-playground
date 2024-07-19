@@ -1,0 +1,5 @@
+{{ include "example-chart.check-ctx-value" (dict "ctx" .) }}
+
+{{ include "example-chart.check-ctx-chart-meta" (dict "ctx" .) }}
+
+chartName: {{ include "example-chart.check-chart-name" (dict "ctx" .) }}

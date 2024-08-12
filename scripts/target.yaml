@@ -1,0 +1,5 @@
+extraEnv:
+  - name: foo1
+    value: demo1
+  - name: foo2
+    value: demo2
